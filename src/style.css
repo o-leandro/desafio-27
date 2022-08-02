@@ -464,6 +464,7 @@ footer h2 {
     position: relative;
     top: 2.5px;
     right: 10px;
+    border-radius: 0px 10px 10px 0px;
   }
 
   footer.container {
