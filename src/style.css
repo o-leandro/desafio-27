@@ -1,0 +1,585 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores */
+  --red: #DA2535;
+  --black: #292929;
+  --gray: #616161;
+  --white-200: #F3F3F3;
+  --white: #FBFBFB;
+
+  /* Fontes */
+   --inter: 'Inter', sans-serif;
+   --montserrat: 'Montserrat', sans-serif;
+   --poppins: 'Poppins', sans-serif;
+   --roboto: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 62.25%;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 90px;
+  list-style: none;
+}
+
+.menu-item a {
+  color: var(--black);
+  font-family: var(--inter);
+  font-size: 1.8rem;
+  font-weight: 500;
+  position: relative;
+  transition: .3s;
+}
+
+.menu-item a:hover {
+  color: var(--red);
+}
+
+.menu-item a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: var(--red);
+  margin-top: 4px;
+  transition: .3s;
+  position: absolute;
+}
+
+.menu-item a:hover::after {
+  width: 100%;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.entrar {
+  color: var(--black);
+  font-family: var(--inter);
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid var(--black);
+  display: block;
+  padding: 10px 60px;
+}
+
+.entrar:hover {
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+.culinaria {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.culinaria-content {
+ max-width: 520px;
+}
+
+.culinaria-content a {
+  transition: .3s;
+}
+
+.culinaria-content a:hover {
+  transform: scale(1.1);
+}
+
+.culinaria h1 {
+  color: var(--black);
+  font-family: var(--montserrat);
+  font-size: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.culinaria p {
+  color: var(--black);
+  font-family: var(--inter);
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+
+.culinaria a {
+  display: block;
+  color: var(--white);
+  font-family: var(--inter);
+  font-size: 2.4rem;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background-color: var(--red);
+  max-width: 290px;
+  text-align: center;
+}
+
+.culinaria-img img {
+  margin-top: 100px;
+}
+
+.tradicional {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+.tradicional-content {
+  max-width: 500px;
+}
+
+.tradicional-content h2 {
+  color: var(--black);
+  font-size: 4.8rem;
+  font-family: var(--montserrat);
+  margin-bottom: 24px;
+}
+
+.tradicional-content p {
+  color: var(--black);
+  font-size: 2.4rem;
+  font-family: var(--inter);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.tradicional-content a {
+  color: var(--red);
+  font-size: 2.4rem;
+  font-family: var(--inter);
+  font-weight: 500;
+  border-bottom: 2px solid var(--red);
+}
+
+.populares h2 {
+  color: var(--black);
+  font-size: 4.8rem;
+  font-family: var(--montserrat);
+  text-align: center;
+  margin-bottom: 160px;
+}
+
+.pratos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin-bottom: 100px;
+}
+
+.prato-item {
+  background-color: #F3F3F3;
+  border-radius: 32px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prato-item img {
+  margin-top: -100px;
+  margin-bottom: 50px;
+  transition: .7s;
+}
+
+.prato-item img:hover {
+  transform: rotate(380deg);
+}
+
+.prato-item h3 {
+  color: var(--black);
+  font-size: 2.6rem;
+  font-family: var(--montserrat);
+  font-weight: 500;
+  padding: 0 25px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.prato-item p {
+  color: var(--gray);
+  font-size: 1.5rem;
+  font-family: var(--inter);
+  font-weight: 400;
+  margin-bottom: 32px;
+  padding: 0 60px;
+  text-align: center;
+}
+
+.prato-item span {
+  color: var(--black);
+  font-size: 3.2rem;
+  font-family: var(--montserrat);
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.title-comentario {
+  color: var(--black);
+  font-size: 4.8rem;
+  font-family: var(--montserrat);
+  margin-bottom: 48px;
+}
+
+.comentarios {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.comentarios-item {
+  width: 600px;
+  background-color: var(--white-200);
+  margin-bottom: 100px;
+}
+
+.comentarios-item > img {
+  padding: 40px 0 24px 40px;
+}
+
+.comentarios-item h3 {
+  color: var(--black);
+  font-family: var(--montserrat);
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-left: 40px;
+  margin-bottom: 16px;
+}
+
+.comentarios-item p {
+  color: var(--gray);
+  font-family: var(--inter);
+  font-size: 2.4rem;
+  font-weight: 400;
+  max-width: 450px;
+  margin-left: 40px;
+  margin-bottom: 16px;
+}
+
+.estrelas {
+  display: flex;
+  gap: 7px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.localizacao h2 {
+  color: var(--black);
+  font-size: 4.8rem;
+  font-family: var(--montserrat);
+  margin-bottom: 48px;
+}
+
+.mapa {
+ margin-bottom: 56px;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+form input {
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+  font-size: 2.4rem;
+  padding-left: 66px;
+  height: 70px;
+  background: url("img/fi_map-pin.svg");
+  background-repeat: no-repeat;
+  background-position: 20px 20px ;
+  background-size: 30px;
+}
+
+form input::placeholder {
+  font-size: 2.4rem;
+}
+
+.buscar {
+  color: var(--white);
+  background-color: var(--red);
+  font-size: 2.4rem;
+  font-family: var(--inter);
+  font-weight: 500;
+  padding: 21px 50px;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  position: relative;
+  top: 1px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.search {
+  display: none;
+}
+
+footer.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 100px;
+}
+
+footer span {
+  color: var(--gray);
+  font-family: var(--roboto);
+  font-size: 1.8rem;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer h2 {
+  color: var(--black);
+  font-family: var(--poppins);
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sobre a {
+  color: var(--gray);
+  font-family: var(--roboto);
+  font-size: 1.8rem;
+  font-family: 400;
+}
+
+.servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 11px
+}
+
+@media (max-width: 850px) {
+  .menu, .entrar {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .culinaria h1, .tradicional-content h2, .populares h2, .title-comentario, .localizacao h2 {
+    font-size: 3.5rem;
+  }
+
+  .culinaria p, .tradicional-content p, .tradicional-content a  {
+    font-size: 1.8rem;
+  }
+  
+  .tradicional-content h2 {
+    margin-bottom: 10px;
+  }
+
+  .tradicional-content p {
+    margin-bottom: 20px;
+  }
+
+  .tradicional {
+    gap: 30px;
+    margin-bottom: 56px;
+  }
+
+  .tradicional-content {
+    text-align: center;
+  }
+
+  .pratos {
+    flex-wrap: wrap;
+    row-gap: 150px;
+  }
+
+  form {
+    margin-bottom: 56px;
+  }
+
+  form input {
+    height: 40px;
+    width: 80%;
+    padding-left: 47px;
+    background: url("img/fi_map-pin.svg");
+    background-repeat: no-repeat;
+    background-position: 16px 10px;
+    background-size: 15px;
+  }
+
+  form input::placeholder {
+    font-size: 1.8rem;
+  }
+
+  .buscar {
+    display: none;
+  }
+  
+  .search {
+    display: inline-block;
+    background-color: var(--red);
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    height: 40px;
+    position: relative;
+    top: 2.5px;
+    right: 10px;
+  }
+
+  footer.container {
+    margin-bottom: 56px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .menu, .entrar, .culinaria-img img {
+    display: none;
+  }
+
+  .header {
+    margin-bottom: 57px;
+  }
+
+  .culinaria h1 {
+    font-size: 3.2rem;
+  }
+
+  .culinaria p {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+
+  .culinaria a {
+    max-width: 100%;
+  }
+
+  .tradicional {
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .tradicional-content h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .tradicional-content p {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .title-comentario {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .pratos {
+    margin-bottom: 55px;
+  }
+
+  .comentarios {
+    flex-wrap: wrap;
+  }
+
+  .comentarios-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+
+  .comentarios-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .comentarios-item p {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .localizacao h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  form input::placeholder {
+    font-size: 1.8rem;
+  }
+
+  footer.container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer .logo {
+    grid-column: 1 / -1;
+    margin-bottom: 32px;
+  }
+
+  footer h2 {
+    font-size: 1.6rem;
+  }
+
+  .sobre {
+    grid-column: 1;
+    font-size: 1.6rem;
+  }
+
+  .sobre a {
+    font-size: 1.4rem;
+  }
+
+  .contato {
+    margin-bottom: 24px;
+  }
+
+  .contato span, .servicos span {
+    font-size: 1.4rem;
+  }
+
+  .servicos {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
